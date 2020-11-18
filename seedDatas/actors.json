@@ -1,0 +1,38 @@
+[
+    {
+        "username": "smile",
+        "password": "tuyetuye",
+        "displayName": "Smile Joker",
+        "reputation": 4
+    },
+    {
+        "username": "sweet",
+        "password": "tuyetuye",
+        "displayName": "Sweet Joker",
+        "reputation": 3
+    },
+    {
+        "username": "sister",
+        "password": "tuyetuye",
+        "displayName": "Sister Joker",
+        "reputation": 3
+    },
+    {
+        "username": "sadistic",
+        "password": "tuyetuye",
+        "displayName": "Sadistic Joker",
+        "reputation": 5
+    },
+    {
+        "username": "surprise",
+        "password": "tuyetuye",
+        "displayName": "Surprise Joker",
+        "reputation": 4
+    },
+    {
+        "username": "spongebob",
+        "password": "tuyetuye",
+        "displayName": "Spongebob Joker",
+        "reputation": 4
+    }
+]

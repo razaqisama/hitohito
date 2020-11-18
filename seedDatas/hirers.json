@@ -1,0 +1,37 @@
+[
+    {
+        "username": "ayaneru",
+        "password": "tuyetuye",
+        "name": "Sakura Ayane",
+        "age": 26,
+        "gender": "female"
+    },
+    {
+        "username": "chinpoki",
+        "password": "tuyetuye",
+        "name": "Tomokazu Sugita",
+        "age": 40,
+        "gender": "male"
+    },
+    {
+        "username": "miyukichi",
+        "password": "tuyetuye",
+        "name": "Miyuki Sawashiro",
+        "age": 35,
+        "gender": "female"
+    },
+    {
+        "username": "hanakana",
+        "password": "tuyetuye",
+        "name": "Hanazawa Kana",
+        "age": 31,
+        "gender": "female"
+    },
+    {
+        "username": "kirito",
+        "password": "tuyetuye",
+        "name": "Matsuoka Yoshitsugu",
+        "age": 34,
+        "gender": "male"
+    }
+]
