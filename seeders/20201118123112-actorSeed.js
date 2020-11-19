@@ -15,7 +15,7 @@ module.exports = {
     for(let i = 0; i < data.length; i++){
       data[i].createdAt = new Date();
       data[i].updatedAt = new Date();
-      data[i].password = encrypt(data[i].password);
+      data[i].password = encrypt.encryptPWD(data[i].password);
     }
 
     return queryInterface.bulkInsert('Actors', data, {});

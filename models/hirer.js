@@ -2,6 +2,9 @@
 const {
   Model
 } = require('sequelize');
+
+const encrypt = require('../helpers/encryptPWD');
+
 module.exports = (sequelize, DataTypes) => {
   class Hirer extends Model {
     /**
@@ -21,6 +24,12 @@ module.exports = (sequelize, DataTypes) => {
     age: DataTypes.INTEGER,
     gender: DataTypes.STRING
   }, {
+    hooks: {
+      beforeCreate(instance, options){
+        const hash = encrypt.encryptPWD(instance.password);
+        instance.password = hash;
+      }
+    },
     sequelize,
     modelName: 'Hirer',
   });

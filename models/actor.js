@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 
-const encryptPWD = require('../helpers/encryptPWD');
+const encrypt = require('../helpers/encryptPWD');
 module.exports = (sequelize, DataTypes) => {
   class Actor extends Model {
     /**
@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     hooks:{
       beforeCreate(instance, options){
-        let hash = encryptPWD(instance.password);
+        const hash = encrypt.encryptPWD(instance.password);
         instance.password = hash;
       }
     },
