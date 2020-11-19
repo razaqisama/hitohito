@@ -1,10 +1,26 @@
 <%- include ('partial/header.ejs') -%>
+
 <body>
-    <h1><a href = '/'>HITO-HITO APP</a></h1>
-    <h3>Hire AnonimGuys To Do Your Dirty Job || Get Money By Doing Some Dirty Job</h3>
-    <p>Create Account: </p>
-    <a href ='/hirers/register'>Hirer</a>
-    <a href ='/actors/register'>Actors</a>
-    <p>Already have account? <a href = '/loginCenter'>Login Here</a></p>
+    <div class="row">
+        <div class="black"></div>
+        <div class="container">
+            <h1><a href='/'>HITO-HITO APP</a></h1>
+            <h3>Hire AnonimGuys To Do Your Dirty Job || Get Money By Doing Some Dirty Job</h3>
+            <p class="white">Create Account: </p>
+            <div class="tampung">
+                <div class="tmp"><i class="fas fa-2x fa-user-check"></i> <a href='/hirers/register'>Hirer</a>
+                </div>
+            </div>
+            <div class="tampung">
+                <div class="tmp"><i class="fas fa-2x fa-hands-helping"></i><a href='/actors/register'>Actors</a>
+                </div>
+            </div>
+            <br><br>
+            <div class="whiter">
+                <p class="green">Already have account? <a href='/loginCenter'>Login Here</a></p>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
