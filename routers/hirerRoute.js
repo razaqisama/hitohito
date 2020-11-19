@@ -10,6 +10,8 @@ route.get('/register', Controller.regist);
 route.post('/register', Controller.registPost);
 
 route.use(autentifikasi);
-route.get('/', Controller. hirerHome);
-
+route.get('/', Controller.hirerHome);
+route.post('/addRequest', Controller.addRequestPost);
+route.get('/cancelRequest/:id', Controller.cancelRequest);
+route.post('/giveRating/:id', Controller.giveRating);
 module.exports = route;

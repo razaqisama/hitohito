@@ -18,8 +18,15 @@ module.exports = (sequelize, DataTypes) => {
   Request.init({
     HirerId: DataTypes.INTEGER,
     ActorId: DataTypes.INTEGER,
-    request: DataTypes.STRING
+    request: DataTypes.STRING,
+    requestStatus: DataTypes.STRING
   }, {
+    hooks:{
+      beforeCreate(instance, options){
+        instance.ActorId = null;
+        instance.requestStatus = "Available"
+      }
+    },
     sequelize,
     modelName: 'Request',
   });
