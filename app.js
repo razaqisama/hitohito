@@ -11,10 +11,10 @@ app.use(session({
     secret: 'secretBanget',
     resave: false,
     saveUninitialized: true,
-}))
+    })
+);
 
-
-
+app.use(express.static("public"));
 app.use('/', router);
 
 app.listen(port, ()=>{
