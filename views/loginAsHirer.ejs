@@ -1,21 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hitohito</title>
-</head>
+<%- include ('partial/header') -%>
+
+
 <body>
-    <h1><a href = '/'>HITO-HITO APP</a></h1>
-    <h3>Hire AnonimGuys To Do Your Dirty Job || Get Money By Doing Some Dirty Job</h3>
-    <p>Login as Hirer: </p>
-    <form action="/hirers/login" method ="POST">
+  <div class="row">
+    <div class="black"></div>
+    <div class="container">
+      <h1><a href='/'>HITO-HITO APP</a></h1>
+      <h3>Hire AnonimGuys To Do Your Dirty Job || Get Money By Doing Some Dirty Job</h3>
+      <p class="white">Login as Hirer: </p>
+      <form action="/hirers/login" method="POST">
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username"><br>
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password"><br><br>
         <input type="submit" value="Login">
       </form>
-    <p>Don't have account? <a href = '/hirers/register'>Create Here</a></p>
+      <p>Don't have account? <a href='/hirers/register'>Create Here</a></p>
+    </div>
+  </div>
 </body>
+
 </html>

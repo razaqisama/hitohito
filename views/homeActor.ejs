@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hitohito</title>
-</head>
+<%- include ('partial/header.ejs') -%>
+
 <body>
-    <h1><a href = '/'>HITO-HITO APP</a></h1>
-    <h3>Welcome <%=data%></h3>
-    <a href ='/actors/logout'>Logout</a>
+    <div class="row">
+        <div class="black"></div>
+        <div class="container">
+            <h1><a href='/'>HITO-HITO APP</a></h1>
+            <h3>Welcome <%=data%></h3>
+            <a href='/actors/logout'>Logout</a>
+        </div>
+    </div>
+
 </body>
+
 </html>
