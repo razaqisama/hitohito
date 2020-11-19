@@ -18,11 +18,73 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Hirer.init({
-    username: DataTypes.STRING,
-    password: DataTypes.STRING,
-    name: DataTypes.STRING,
-    age: DataTypes.INTEGER,
-    gender: DataTypes.STRING
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        notNull: {
+          msg: 'Username tidak boleh null say'
+        },
+        notEmpty: {
+          msg: 'Username tidak boleh kosong say'
+        }
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate:{
+        notNull: {
+          msg: 'Password Tidak Boleh Null Say'
+        },
+        notEmpty: {
+          msg: 'Password Tidak Boleh Kosong Say'
+        }
+      }
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate:{
+        notNull: {
+          msg: 'Name Tidak Boleh Null Say'
+        },
+        notEmpty: {
+          msg: 'Name Tidak Boleh Kosong Say'
+        }
+      }
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate:{
+        notNull: {
+          msg: 'Age Tidak Boleh Null Say'
+        },
+        notEmpty: {
+          msg: 'Age Tidak Boleh Kosong Say'
+        },
+        isNumeric: {
+          msg: 'Agenya harus angka ya, say'
+        }
+      }},
+    gender: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate:{
+        notNull: {
+          msg: 'Gender Tidak Boleh Null Say'
+        },
+        notEmpty: {
+          msg: 'Gender Tidak Boleh Kosong Say'
+        },
+        isActuallyGender(value){
+          if(value !== 'male' || value !== 'female'){
+            throw new Error('Gender harus male or female say')
+          }
+        }
+      }}
   }, {
     hooks: {
       beforeCreate(instance, options){

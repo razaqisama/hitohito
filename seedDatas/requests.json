@@ -1,0 +1,38 @@
+[
+    {
+        "ActorId": 1,
+        "HirerId": 2,
+        "request": "Dibutuhkan seseorang yang mau cuciin piring kotor saya",
+        "requestStatus": "On Progress"
+    },
+    {
+        "ActorId": 2,
+        "HirerId": 1,
+        "request": "Dibutuhkan seseorang yang mau pura pura jadi pacar di depan orang tua saya",
+        "requestStatus": "Done"
+    },
+    {
+        "ActorId": 2,
+        "HirerId": 4,
+        "request": "Dibutuhkan seseorang yang mau membahagiakan hidup saya",
+        "requestStatus": "On Progress"
+    },
+    {
+        "ActorId": null,
+        "HirerId": 3,
+        "request": "Dibutuhkan Joki MMR Dota",
+        "requestStatus": "Available"
+    },
+    {
+        "ActorId": null,
+        "HirerId": 3,
+        "request": "Dibutuhkan Joki Pair Project",
+        "requestStatus": "Available"
+    },
+    {
+        "ActorId": null,
+        "HirerId": 1,
+        "request": "Dibutuhkan seseorang yang bisa nemenin ke pasar",
+        "requestStatus": "Available"
+    }
+]

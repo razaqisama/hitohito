@@ -7,7 +7,90 @@
 </head>
 <body>
     <h1><a href = '/'>HITO-HITO APP</a></h1>
-    <h3>Welcome <%=data%></h3>
+    <h3>Welcome <%=name%></h3>
+
+    <p>These are your "On Progress" Request:</p>
+    <% if(reqOnProgress.length){%>
+        <table border ="1">
+            <tr>
+                <th>No</th>
+                <th>Request</th>
+                <th>Request Status</th>
+                <th>Being Worked On By</th>
+            </tr>
+            <% for(let i = 0; i < reqOnProgress.length; i++){%>
+                <tr>
+                    <td><%= i + 1%></td>
+                    <td><%= reqOnProgress[i].request%></td>
+                    <td><%= reqOnProgress[i].requestStatus%></td>
+                    <td><%= reqOnProgress[i].Actor.displayName%></td>
+                </tr>
+            <%}%>
+        </table>
+    <%} else {%>
+        <p>You have no "On Progress" Request</p>
+    <%}%>
+    <br>
+    <br>
+    
+    <p>These are your Pending Request:</p>
+    <% if(myPendingReq.length){%>
+        <table border ="1">
+            <tr>
+                <th>No</th>
+                <th>Request</th>
+                <th>Action</th>
+            </tr>
+            <% for(let i = 0; i < myPendingReq.length; i++){%>
+                <tr>
+                    <td><%= i + 1%></td>
+                    <td><%= myPendingReq[i].request%></td>
+                    <td><a href = "/hirers/cancelRequest/<%=myPendingReq[i].id%>">Cancel</a></td>
+                </tr>
+            <%}%>
+        </table>
+    <%} else {%>
+        <p>You Have no "Pending" Request</p>
+    <%}%>
+    <br>
+    <form action= "/hirers/addRequest" method="POST">
+        <textarea id="request" name="request" rows="4" cols="50" placeholder="Write your request here"></textarea>
+        <br>
+        <input type="submit" value="Add New Request">
+    </form>
+    <br>
+
+    <p>These Request Already Done</p>
+    <%if(myDoneReq.length){%>
+        <table border ="1">
+            <tr>
+                <th>No</th>
+                <th>Request</th>
+                <th>Done By</th>
+                <th>Give Rating</th>
+            </tr>
+            <% for(let i = 0; i < myDoneReq.length; i++){%>
+                <tr>
+                    <td><%= i + 1%></td>
+                    <td><%= myDoneReq[i].request%></td>
+                    <td><%=myDoneReq[i].Actor.displayName%></td>
+                    <td> <form action="/hirers/giveRating/<%=myDoneReq[i].id%>" method="post">
+                        <input type="number" id="rating" name="rating" min="1" max="5">
+                        <input type="submit" value="Submit">
+                    </form></td>
+                </tr>
+            <%}%>
+        </table>
+    <%} else {%>
+        <%if(reqOnProgress.length) {%>
+            <p>Your Request Still in Progress</p>
+        <%}else if(myPendingReq.length){%>
+            <p>Your Request Still Pending. Please Wait An Actors To Apply Your Request</p>
+        <%}else {%>
+            <p>You have no Request</p>
+        <%}%>
+    <%}%>
+    <p>Don't forget to give Actors Rating</p>
     <a href ='/hirers/logout'>Logout</a>
 </body>
 </html>

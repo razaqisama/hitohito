@@ -7,7 +7,57 @@
 </head>
 <body>
     <h1><a href = '/'>HITO-HITO APP</a></h1>
-    <h3>Welcome <%=data%></h3>
+    <h3>Welcome <%=displayName%></h3>
+    <p>These are request available: </p>
+
+    <% if(reqAvailable.length){ %>
+        <table border="1">
+            <tr>
+                <th>No</th>
+                <th>Request</th>
+                <th>Requested By</th>
+                <th>Request Status</th>
+                <th>Action</th>
+            </tr>
+            <% for(let i = 0;  i < reqAvailable.length; i++){ %>
+                <tr>
+                    <td><%=i + 1%></td>
+                    <td><%=reqAvailable[i].request%></td>
+                    <td><%=reqAvailable[i].Hirer.name%></td>
+                    <td><%=reqAvailable[i].requestStatus%></td>
+                    <td><a href ="/actors/applyRequest/<%=reqAvailable[i].id%>">Apply This Request</a></td>
+                </tr>
+            <%}%>
+        </table>
+    <%} else {%>
+        <p>There is no request available. Comeback later</p>
+    <%}%>
+    <br>
+    <br>
+    <p>You are doing:</p>
+
+    <% if(reqOnProgress.length){ %>
+        <table border="1">
+            <tr>
+                <th>No</th>
+                <th>Request</th>
+                <th>Requested By</th>
+                <th>Request Status</th>
+                <th>Action</th>
+            </tr>
+            <% for(let i = 0;  i < reqOnProgress.length; i++){ %>
+                <tr>
+                    <td><%=i + 1%></td>
+                    <td><%=reqOnProgress[i].request%></td>
+                    <td><%=reqOnProgress[i].Hirer.name%></td>
+                    <td><%=reqOnProgress[i].requestStatus%></td>
+                    <td><a href ="/actors/markAsDone/<%=reqOnProgress[i].id%>">Mark As Done</a></td>
+                </tr>
+            <%}%>
+        </table>
+    <%} else {%>
+        <p>You are not applying any request</p>
+    <%}%>
     <a href ='/actors/logout'>Logout</a>
 </body>
 </html>

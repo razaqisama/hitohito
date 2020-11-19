@@ -8,17 +8,7 @@ module.exports = {
      * Example:
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
-    return queryInterface.addConstraint('Requests', {
-      fields: ['ActorId'],
-      type: 'foreign key',
-      name: 'fkActorIdConstraint',
-      references: { //Required field
-        table: 'Actors',
-        field: 'id'
-      },
-      onDelete: 'cascade',
-      onUpdate: 'cascade'
-    });
+    return queryInterface.addColumn('Requests', 'requestStatus', Sequelize.STRING)
   },
 
   down: (queryInterface, Sequelize) => {
@@ -28,6 +18,6 @@ module.exports = {
      * Example:
      * await queryInterface.dropTable('users');
      */
-    return queryInterface.removeConstraint('Requests', 'fkActorIdConstraint');
+    return queryInterface.removeColumn('Requests', 'requestStatus');
   }
 };
