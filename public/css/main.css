@@ -1,5 +1,9 @@
+body {
+  font-family: "Montserrat";
+}
 h1 {
   font-size: 70pt;
+  font-weight: bold;
 }
 .row {
   background: url("../img/hring.jpg") no-repeat;
@@ -20,7 +24,8 @@ h1 {
 a {
   color: white;
 }
-h3 {
+h3,
+.green {
   color: rgb(0, 255, 149);
 }
 .please {
@@ -34,13 +39,24 @@ h3 {
   text-align: center;
   background-color: rgb(0, 124, 72);
 }
+.whiter {
+  margin-top: 2%;
+}
 
 .tmp {
   margin-top: 5%;
 }
 .tampung:hover {
-  background-color: rgb(0, 189, 189);
+  background-color: rgb(6, 93, 119);
+}
+#yellow:hover {
+  background-color: rgb(0, 88, 52);
 }
 a:hover {
+  text-decoration: none;
+  color: white;
+}
+.white {
+  font-size: 20pt;
   color: white;
 }
