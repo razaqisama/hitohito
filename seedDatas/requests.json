@@ -34,5 +34,30 @@
         "HirerId": 1,
         "request": "Dibutuhkan seseorang yang bisa nemenin ke pasar",
         "requestStatus": "Available"
+    },
+    {
+        "ActorId": 3,
+        "HirerId": 1,
+        "request": "Dibutuhkan seseorang yang bisa membuat saya growth mindset",
+        "requestStatus": "On Progress"
+    },
+    {
+        "ActorId": 4,
+        "HirerId": 3,
+        "request": "Dibutuhkan seseorang yang bisa bantuin mvp pair project ini",
+        "requestStatus": "On Progress"
+    },
+    {
+        "ActorId": 5,
+        "HirerId": 4,
+        "request": "Dibutuhkan yang lain lain",
+        "requestStatus": "Done"
+    },
+    {
+        "ActorId": null,
+        "HirerId": 2,
+        "request": "Dibutuhkan seseorang pangeran yang ingin menemani ke pesta dansa",
+        "requestStatus": "Available"
     }
+    
 ]
